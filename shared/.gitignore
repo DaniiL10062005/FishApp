@@ -1,1 +1,143 @@
-/build
+# =========================
+# Gradle
+# =========================
+.gradle/
+build/
+**/build/
+!**/build/cocoapods/   # <-- ОБЯЗАТЕЛЬНО для KMP
+
+# Gradle wrapper (должен быть в репо)
+!gradle/wrapper/gradle-wrapper.jar
+!gradle/wrapper/gradle-wrapper.properties   # <-- ОБЯЗАТЕЛЬНО
+
+# =========================
+# Android Studio / IntelliJ
+# =========================
+.idea/
+!.idea/.gitignore
+!.idea/codeStyles/
+!.idea/runConfigurations/
+*.iml
+*.ipr
+*.iws
+
+# =========================
+# iOS / Xcode
+# =========================
+**/iosApp/Pods/
+**/iosApp/Podfile.lock
+**/iosApp/DerivedData/
+**/iosApp/*.xcworkspace/xcuserdata/
+**/iosApp/*.xcodeproj/xcuserdata/
+**/iosApp/*.xcodeproj/project.xcworkspace/
+
+# =========================
+# Android
+# =========================
+local.properties
+
+# APK / AAB
+*.apk
+*.aab
+
+# Android generated files
+captures/
+.externalNativeBuild/
+.cxx/
+
+# =========================
+# Kotlin
+# =========================
+.kotlin/
+**/.kotlin/
+**/.kotlin_module
+.kotlin_module
+
+# Kotlin/Native generated
+!**/build/cocoapods/
+
+
+# =========================
+# Compose Multiplatform
+# =========================
+compose-generated/
+
+
+# =========================
+# iOS / Xcode
+# =========================
+# Xcode user-specific settings
+xcuserdata/
+*.xcuserstate
+*.xcscmblueprint
+
+# Xcode build products
+DerivedData/
+
+# Swift Package Manager
+.build/
+Packages/
+
+# CocoaPods
+Pods/
+
+# Fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/**/*.png
+fastlane/test_output/
+
+
+# =========================
+# macOS
+# =========================
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Finder metadata
+._*
+
+# Spotlight
+.Spotlight-V100
+
+# Trash
+.Trashes
+
+
+# =========================
+# Java / Kotlin
+# =========================
+*.class
+
+# Crash logs
+hs_err_pid*
+replay_pid*
+
+
+# =========================
+# Environment / secrets
+# =========================
+.env
+.env.*
+!.env.example
+
+# Keystores / signing
+*.jks
+*.keystore
+
+
+# =========================
+# Logs
+# =========================
+*.log
+
+
+# =========================
+# Temporary files
+# =========================
+*.tmp
+*.temp
+*.swp
+*.swo
+*~

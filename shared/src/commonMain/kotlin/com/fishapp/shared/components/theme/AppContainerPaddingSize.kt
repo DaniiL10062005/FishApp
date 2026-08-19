@@ -1,9 +1,8 @@
-package com.fishapp.shared.components.AppButton
-
+package com.fishapp.shared.components.theme
 import androidx.compose.ui.unit.Dp
 import com.fishapp.shared.components.theme.AppSpacing
 
-data class AppButtonSize (
+data class AppContainerPaddingSize private constructor(
     private val horizontalPadding: AppSpacing,
     private val verticalPadding: AppSpacing
 ) {
@@ -11,21 +10,17 @@ data class AppButtonSize (
     fun getHorizontal() = horizontalPadding
     fun getVertical() = verticalPadding
     companion object{
-        val small = AppButtonSize(
+        val small = AppContainerPaddingSize(
             AppSpacing.xl,
             AppSpacing.m
         )
-        val medium = AppButtonSize (
+        val medium = AppContainerPaddingSize (
             AppSpacing.xxxl,
             AppSpacing.l
         )
-        val large = AppButtonSize (
+        val large = AppContainerPaddingSize (
             AppSpacing.biggest,
             AppSpacing.xl
-        )
-        fun custom(horizontal: Dp, vertical: Dp) = AppButtonSize(
-            AppSpacing.custom(horizontal),
-            AppSpacing.custom(vertical)
         )
     }
 }

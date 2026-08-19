@@ -13,6 +13,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import com.fishapp.shared.components.theme.AppColors
+import com.fishapp.shared.components.theme.AppContainerPaddingSize
 import com.fishapp.shared.components.theme.AppRadius
 import com.fishapp.shared.components.theme.AppSpacing
 import com.fishapp.shared.components.theme.AppTypography
@@ -21,7 +22,7 @@ import com.fishapp.shared.components.theme.AppTypography
 fun AppButton (
     text: String?,
     textStyle: AppTypography = AppTypography.p,
-    size: AppButtonSize = AppButtonSize.medium,
+    padding: AppContainerPaddingSize = AppContainerPaddingSize.medium,
     color: AppColors = AppColors.primary,
     pressColor: AppColors = AppColors.secondary,
     radius: AppRadius = AppRadius.xl,
@@ -30,14 +31,15 @@ fun AppButton (
     horizontalPadding: AppSpacing?,
     enabled: Boolean,
     borderWidth: AppSpacing?,
-    borderColor: AppColors?
+    borderColor: AppColors?,
+    modifier: Modifier = Modifier
     ){
     val interactionSource = remember { MutableInteractionSource() }
     val isPressed by interactionSource.collectIsPressedAsState()
 
     Button(
         onClick = onClick,
-        modifier = Modifier
+        modifier = modifier
             .padding(
                 horizontalPadding?.getSpacing() ?: AppSpacing.s.getSpacing(),
                 verticalPadding?.getSpacing() ?: AppSpacing.s.getSpacing()
@@ -52,8 +54,8 @@ fun AppButton (
             borderWidth?.getSpacing() ?: AppSpacing.none.getSpacing(),
             borderColor?.getColor() ?: color.getColor()),
         contentPadding = PaddingValues(
-            horizontal = size.getHorizontal().getSpacing(),
-            vertical = size.getVertical().getSpacing()
+            horizontal = padding.getHorizontal().getSpacing(),
+            vertical = padding.getVertical().getSpacing()
         ),
         interactionSource = interactionSource,
         content = {

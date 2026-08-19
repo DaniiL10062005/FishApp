@@ -2,7 +2,7 @@ package com.fishapp.shared.components.theme
 
 import androidx.compose.ui.graphics.Color
 
-data class AppColors(
+data class AppColors private constructor(
     private val color: Color
 )
 {
@@ -15,8 +15,5 @@ data class AppColors(
         val surface = AppColors(Color.White)
         val textPrimary = AppColors(Color(0xFF1C2733))
         val textSecondary = AppColors(Color(0xFF425C7A))
-        fun custom(color: Long)=
-            AppColors(Color(color))
-
     }
 }

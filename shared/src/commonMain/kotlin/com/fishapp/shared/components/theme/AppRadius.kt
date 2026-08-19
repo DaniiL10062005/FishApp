@@ -4,7 +4,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 
-class AppRadius(
+class AppRadius private constructor(
     private val radius: RoundedCornerShape
 )
 {
@@ -16,7 +16,7 @@ class AppRadius(
         val m = AppRadius(RoundedCornerShape(8.dp))
         val l = AppRadius(RoundedCornerShape(12.dp))
         val xl = AppRadius(RoundedCornerShape(16.dp))
+        val xxl = AppRadius(RoundedCornerShape(24.dp))
         val o = AppRadius(RoundedCornerShape(50))
-        fun custom(radius:Dp) = AppRadius(RoundedCornerShape(radius))
     }
 }

@@ -4,7 +4,7 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 
 
-data class AppSpacing(
+data class AppSpacing private constructor(
     private val spacing: Dp
 )
 {
@@ -20,6 +20,5 @@ data class AppSpacing(
         val xxl = AppSpacing(20.dp)
         val xxxl = AppSpacing(24.dp)
         val biggest = AppSpacing(32.dp)
-        fun custom(spacing: Dp) = AppSpacing(spacing)
     }
 }

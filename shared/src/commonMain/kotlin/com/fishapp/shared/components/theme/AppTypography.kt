@@ -4,7 +4,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.sp
 
-data class AppTypography(
+data class AppTypography private constructor(
     private val size: TextUnit,
     private val weight: FontWeight
 )
